@@ -6,12 +6,12 @@
 /*   By: mmeuric <mmeuric@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:29:00 by mmeuric           #+#    #+#             */
-/*   Updated: 2024/12/17 19:29:35 by mmeuric          ###   ########.fr       */
+/*   Updated: 2024/12/21 22:43:45 by mmeuric          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "utils.h"
+#include <stdio.h>
 
 void	error_message(char *text, int nb)
 {
@@ -46,10 +46,10 @@ void	show_help(void)
 	print("\n", 1);
 	print(" +----------------------- TUTORIAL ------------------------+\n", 1);
 	print(" |                                                         |\n", 1);
-	print(" | Usage: ./fractol [mandelbrot / julia / burning_ship /   |\n", 1);
-	print(" |                   tricorn]                              |\n", 1);
+	print(" | Usage: ./fractol [m mandelbrot / j julia /              |\n", 1);
+	print(" |                   b burning_ship / t tricorn]           |\n", 1);
 	print(" |                                                         |\n", 1);
-	print(" | e.g: ./fractol mandelbrot                               |\n", 1);
+	print(" | e.g: ./fractol m                                        |\n", 1);
 	print(" |                                                         |\n", 1);
 	print(" |----------------------- KEYBOARD ------------------------|\n", 1);
 	print(" |                                                         |\n", 1);

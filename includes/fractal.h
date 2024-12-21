@@ -6,7 +6,7 @@
 /*   By: mmeuric <mmeuric@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 17:13:23 by mmeuric           #+#    #+#             */
-/*   Updated: 2024/12/19 04:56:55 by mmeuric          ###   ########.fr       */
+/*   Updated: 2024/12/21 22:44:46 by mmeuric          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,15 @@
 # define JULIA 2
 # define BURNING_SHIP 3
 # define TRICORN 4
-# define MANDELBROT_STR "mandelbrot"
-# define JULIA_STR "julia"
-# define BURNING_SHIP_STR "burning_ship"
-# define TRICORN_STR "tricorn"
+# define MANDELBROT_STR "m"
+# define JULIA_STR "j"
+# define BURNING_SHIP_STR "b"
+# define TRICORN_STR "t"
 
-# define WIN_SIZE 500
+# define WIN_SIZE 800
 # define VIEW_CHANGE_SIZE 60
-# define MAX_ITERATIONS 1000
-# define DEFAULT_COLOR 265
-
-# define SCALE 2
-# define FIXED_RADIUS 1
-# define MINIMUM_RADIUS 0.5
+# define MAX_ITERATIONS 50
+# define DEFAULT_COLOR 165
 
 typedef struct s_pixel
 {

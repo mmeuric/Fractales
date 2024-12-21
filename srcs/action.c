@@ -6,20 +6,23 @@
 /*   By: mmeuric <mmeuric@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 14:38:42 by mmeuric           #+#    #+#             */
-/*   Updated: 2024/12/19 04:48:46 by mmeuric          ###   ########.fr       */
+/*   Updated: 2024/12/21 22:42:03 by mmeuric          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "engine_init.h"
-#include "mlx.h"
 #include "action.h"
 #include "design.h"
+#include "engine_init.h"
+#include "mlx.h"
+#include "utils.h"
 
 int	on_destroy_event(t_engine *engine)
 {
 	mlx_destroy_image(engine->mlx, engine->image.img_ptr);
 	mlx_destroy_window(engine->mlx, engine->window);
-	exit(EXIT_SUCCESS);
+	mlx_destroy_display(engine->mlx);
+	free(engine->mlx);
+	exit(1);
 }
 
 int	on_mouse_hook_event(int key, int x, int y, t_engine *engine)

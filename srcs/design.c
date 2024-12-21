@@ -6,7 +6,7 @@
 /*   By: mmeuric <mmeuric@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:28:52 by mmeuric           #+#    #+#             */
-/*   Updated: 2024/12/17 17:11:56 by mmeuric          ###   ########.fr       */
+/*   Updated: 2024/12/21 03:47:38 by mmeuric          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	draw_fractal(t_engine *engine)
 		while (++y < WIN_SIZE)
 		{
 			iter = calc_fractal(fract, &c, x, y);
-			set_pixel_color(engine, x, y, (iter * fract->color));
+			set_pixel_color(engine, x, y, (iter * 8 * fract->color));
 		}
 	}
 	mlx_put_image_to_window(engine->mlx, engine->window, \

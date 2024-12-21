@@ -6,13 +6,13 @@
 /*   By: mmeuric <mmeuric@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:27:55 by mmeuric           #+#    #+#             */
-/*   Updated: 2024/12/17 19:00:50 by mmeuric          ###   ########.fr       */
+/*   Updated: 2024/12/21 22:42:56 by mmeuric          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "engine_init.h"
-#include "design.h"
 #include "action.h"
+#include "design.h"
+#include "engine_init.h"
 #include "utils.h"
 
 int	main(int argc, char **argv)

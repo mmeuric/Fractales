@@ -6,12 +6,13 @@
 /*   By: mmeuric <mmeuric@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:28:29 by mmeuric           #+#    #+#             */
-/*   Updated: 2024/12/19 04:56:46 by mmeuric          ###   ########.fr       */
+/*   Updated: 2024/12/21 03:16:05 by mmeuric          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "engine_init.h"
 #include "utils.h"
+#include "action.h"
 #include "mlx.h"
 
 void	change_fractal(int key, t_engine *engine)
@@ -75,11 +76,7 @@ void	init_engine(t_engine *engine, char *str)
 												"Fractol project");
 	engine->image.img_ptr = mlx_new_image(engine->mlx, WIN_SIZE, WIN_SIZE);
 	if (!engine->window || !engine->image.img_ptr)
-	{
-		mlx_destroy_image(engine->mlx, engine->image.img_ptr);
-		mlx_destroy_window(engine->mlx, engine->window);
-		error_message("[MLX ERROR]: can't handle object creation!\n", 1);
-	}
+		on_destroy_event(engine);
 	engine->image.addr_ptr = mlx_get_data_addr(engine->image.img_ptr, \
 								&pixel_bits, &line_len, &endian);
 	engine->image.pixel_bits = pixel_bits;
