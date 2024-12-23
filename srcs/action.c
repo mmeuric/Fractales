@@ -22,7 +22,7 @@ int	on_destroy_event(t_engine *engine)
 	mlx_destroy_window(engine->mlx, engine->window);
 	mlx_destroy_display(engine->mlx);
 	free(engine->mlx);
-	exit(1);
+	exit(EXIT_SUCCESS);
 }
 
 int	on_mouse_hook_event(int key, int x, int y, t_engine *engine)
